@@ -2,11 +2,6 @@ version: 2
 
 sources:
   - name: robaws
-<<<<<<< HEAD
-    #description: "{{ doc('hubspot')}}"
-=======
-    #description: "{{ doc('hubspot') }}"
->>>>>>> ec05a486e5e41fa8885d99294cb9d9152c6b1fdb
     database: outbound-catalyst
     tables:
       - name: hubspotcompanies
