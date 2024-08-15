@@ -1,0 +1,380 @@
+version: 2
+
+sources:
+  - name: robaws
+    description: "{{ doc('hubspot') }}"
+    database: outbound-catalyst
+    tables:
+      - name: company
+      - name: contact
+      - name: deal
+
+models:
+  - name: stg_companies
+    description: raw company data coming from hubspot CRM
+    columns:
+      - name: id
+        description: The ID of the company.
+        tests:
+          - unique
+          - not_null
+      - name: property_name
+        description: The name of the company.
+      - name: property_description
+        description: A short statement about the company's mission and goals.
+      - name: property_createdate
+        description: The date the company was added to your account.
+      - name: property_industry
+        description: The type of business the company performs.
+      - name: property_address
+        description: The street address of the company.
+      - name: property_address_2
+        description: Additional address information for the company.
+      - name: property_city
+        description: The city where the company is located.
+      - name: property_state
+        description: The state where the company is located.
+      - name: property_country
+        description: The country where the company is located.
+      - name: property_annualrevenue
+        description: The actual or estimated annual revenue of the company.
+      - name: properties_hs_time_in_salesqualifiedlead
+        description: Duration in Sales Qualified Lead
+      - name: properties_van_marcke_webshop_integratie
+        description: Custom string property for webshop integration
+      - name: properties_most_compelling_robaws_feature
+        description: Custom string property for compelling features
+      - name: properties_partner_niche___vertical_focus
+        description: Partner niche or vertical focus
+      - name: properties_engagements_last_meeting_booked
+        description: The timestamp of the last booked meeting
+      - name: properties_hs_annual_revenue_currency_code
+        description: Annual revenue currency code
+      - name: properties_hs_last_sales_activity_timestamp
+        description: Timestamp of the last sales activity
+      - name: properties_target_companies__own_data_dump_
+        description: Custom data dump for target companies
+      - name: properties_hs_analytics_last_visit_timestamp
+        description: Last visit timestamp from analytics
+      - name: properties_hs_analytics_latest_source_data_1
+        description: Latest source data field 1 from analytics
+      - name: properties_hs_analytics_latest_source_data_2
+        description: Latest source data field 2 from analytics
+      - name: properties_hs_date_exited_salesqualifiedlead
+        description: The timestamp when a company exited sales-qualified lead
+      - name: properties_hs_num_contacts_with_buying_roles
+        description: Number of contacts with buying roles
+      - name: properties_hs_time_in_marketingqualifiedlead
+        description: Duration in Marketing Qualified Lead
+      - name: properties_hs_analytics_first_visit_timestamp
+        description: First visit timestamp from analytics
+      - name: properties_hs_date_entered_salesqualifiedlead
+        description: The timestamp when a company entered sales-qualified lead
+      - name: properties_most_recent_meeting_completed_date
+        description: The date of the most recent completed meeting
+      - name: properties_partner_implementation_capabilities
+        description: Partner implementation capabilities
+      - name: properties_hs_analytics_latest_source_timestamp
+        description: Latest source timestamp from analytics
+      - name: properties_hs_customer_success_ticket_sentiment
+        description: Sentiment score for customer success tickets
+      - name: properties_hs_date_exited_marketingqualifiedlead
+        description: The timestamp when a company exited marketing-qualified lead
+      - name: properties_engagements_last_meeting_booked_medium
+        description: Medium of the last booked meeting
+      - name: properties_engagements_last_meeting_booked_source
+        description: Source of the last booked meeting
+      - name: properties_hs_date_entered_marketingqualifiedlead
+        description: The timestamp when a company entered marketing-qualified lead
+      - name: properties_hs_target_account_recommendation_state
+        description: State of target account recommendation
+      - name: properties_outbound_project___clay_enriched_record
+        description: Outbound project enriched record field
+      - name: properties_engagements_last_meeting_booked_campaign
+        description: Campaign of the last booked meeting
+      - name: properties_hs_user_ids_of_all_notification_followers
+        description: User IDs of all notification followers
+      - name: properties_huidige_software_systeem_victus_callcenter
+        description: Current software system in call center
+      - name: properties_closedate_timestamp_earliest_value_a2a17e6e
+        description: Earliest close date timestamp
+      - name: properties_hs_analytics_last_touch_converting_campaign
+        description: Last touch converting campaign from analytics
+      - name: properties_hs_user_ids_of_all_notification_unfollowers
+        description: User IDs of all notification unfollowers
+      - name: properties_hs_analytics_first_touch_converting_campaign
+        description: First touch converting campaign from analytics
+      - name: properties_hs_latest_createdate_of_active_subscriptions
+        description: Latest create date of active subscriptions
+      - name: properties_hs_target_account_recommendation_snooze_time
+        description: Snooze time of target account recommendation
+      - name: properties_num_conversion_events_cardinality_sum_d095f14b
+        description: Sum of conversion events
+      - name: properties_aantal_personen_ondersteuning_admin___telmacom_
+        description: Number of supporting persons in admin
+      - name: properties_hs_analytics_num_visits_cardinality_sum_53d952a6
+        description: Sum of number of visits from analytics
+      - name: properties_hs_predictivecontactscore_v2_next_max_max_d4e58c1e
+        description: Predictive contact score (next max value)
+      - name: properties_first_meeting_l_quality_score_l_free_text__company_
+        description: Quality score for the first meeting
+      - name: properties_hs_analytics_num_page_views_cardinality_sum_e46e85b0
+        description: Sum of number of page views from analytics
+      - name: properties_hs_analytics_source_timestamp_earliest_value_25a3a52c
+        description: Earliest source timestamp from analytics
+      - name: properties_recent_conversion_date_timestamp_latest_value_72856da1
+        description: Latest timestamp for recent conversion date
+      - name: properties_first_conversion_date_timestamp_earliest_value_61f58f2c
+        description: Earliest timestamp for first conversion date
+      - name: properties_first_contact_createdate_timestamp_earliest_value_78b50eea
+        description: Earliest timestamp for first contact creation date
+      - name: properties_hs_analytics_last_timestamp_timestamp_latest_value_4e16365a
+        description: Latest timestamp for last analytics event
+      - name: properties_hs_analytics_source_data_1_timestamp_earliest_value_9b2f1fa1
+        description: Earliest source data field 1 timestamp from analytics
+      - name: properties_hs_analytics_source_data_2_timestamp_earliest_value_9b2f9400
+        description: Earliest source data field 2 timestamp from analytics
+      - name: properties_recent_conversion_event_name_timestamp_latest_value_66c820bf
+        description: Latest timestamp for recent conversion event name
+      - name: properties_first_conversion_event_name_timestamp_earliest_value_68ddae0a
+        description: Earliest timestamp for first conversion event name
+      - name: properties_hs_analytics_first_timestamp_timestamp_earliest_value_11e3a63a
+        description: Earliest timestamp for first analytics event
+      - name: properties_hs_analytics_last_visit_timestamp_timestamp_latest_value_999a0fce
+        description: Latest timestamp for last visit from analytics
+      - name: properties_hs_analytics_first_visit_timestamp_timestamp_earliest_value_accc17ae
+        description: Earliest timestamp for first visit from analytics
+      - name: properties_hs_analytics_last_touch_converting_campaign_timestamp_latest_value_81a64e30
+        description: Latest timestamp for last touch converting campaign
+      - name: properties_hs_analytics_first_touch_converting_campaign_timestamp_earliest_value_4757fe10
+        description: Earliest timestamp for first touch converting campaign
+
+        
+  - name: stg_contacts
+    description: raw data coming from hubspot CRM
+    columns: 
+      - name: contact_id
+        tests:
+          - unique
+          - not_null
+           - name: properties_hs_calculated_phone_number_area_code
+        description: The calculated area code of the phone number.
+      - name: properties_hs_email_customer_quarantined_reason
+        description: The reason why the customer's email was quarantined.
+      - name: properties_hs_email_sends_since_last_engagement
+        description: Number of email sends since the last engagement.
+      - name: properties_hs_sequences_actively_enrolled_count
+        description: The count of actively enrolled sequences.
+      - name: properties_hs_v2_cumulative_time_in_opportunity
+        description: Cumulative time spent in opportunity.
+      - name: properties_hs_v2_date_exited_salesqualifiedlead
+        description: The date exited from Sales Qualified Lead.
+      - name: properties_number_of_awareness_form_submissions
+        description: Number of awareness form submissions.
+      - name: properties_hs_content_membership_email_confirmed
+        description: Whether the content membership email is confirmed.
+      - name: properties_hs_date_exited_marketingqualifiedlead
+        description: The date exited from Marketing Qualified Lead.
+      - name: properties_hs_eventbrite_lastregisteredeventdate
+        description: The date of the last registered event on Eventbrite.
+      - name: properties_hs_searchable_calculated_phone_number
+        description: The calculated phone number that is searchable.
+      - name: properties_hs_time_to_move_from_lead_to_customer
+        description: Time taken to move from lead to customer.
+      - name: properties_hs_v2_date_entered_salesqualifiedlead
+        description: The date entered into Sales Qualified Lead.
+      - name: properties_engagements_last_meeting_booked_medium
+        description: The medium of the last booked meeting.
+      - name: properties_engagements_last_meeting_booked_source
+        description: The source of the last booked meeting.
+      - name: properties_hs_calculated_phone_number_region_code
+        description: The calculated region code of the phone number.
+      - name: properties_hs_date_entered_marketingqualifiedlead
+        description: The date entered into Marketing Qualified Lead.
+      - name: properties_hs_searchable_calculated_mobile_number
+        description: The calculated mobile number that is searchable.
+      - name: properties_hs_calculated_phone_number_country_code
+        description: The calculated country code of the phone number.
+      - name: properties_hs_v2_latest_time_in_salesqualifiedlead
+        description: The latest time spent in Sales Qualified Lead.
+      - name: properties_outbound_project___clay_enriched_record
+        description: Enriched record field from outbound project.
+      - name: properties_engagements_last_meeting_booked_campaign
+        description: The campaign of the last booked meeting.
+      - name: properties_hs_v2_date_exited_marketingqualifiedlead
+        description: The date exited from Marketing Qualified Lead.
+      - name: properties_number_of_consideration_form_submissions
+        description: Number of consideration form submissions.
+      - name: properties_resultaat_omschrijving_victus_callcenter
+        description: Description of results from Victus call center.
+      - name: properties_disqualification_reason__mql____free_text
+        description: Disqualification reason for MQL in free text.
+      - name: properties_first_meeting_l_quality_score_l_free_text
+        description: Quality score for the first meeting in free text.
+      - name: properties_hs_lifecyclestage_salesqualifiedlead_date
+        description: Date when the lifecycle stage was Sales Qualified Lead.
+      - name: properties_hs_user_ids_of_all_notification_followers
+        description: User IDs of all notification followers.
+      - name: properties_hs_v2_date_entered_marketingqualifiedlead
+        description: The date entered into Marketing Qualified Lead.
+      - name: properties_hs_membership_has_accessed_private_content
+        description: Whether the membership has accessed private content.
+      - name: properties_hs_analytics_last_touch_converting_campaign
+        description: Last touch converting campaign from analytics.
+      - name: properties_hs_content_membership_follow_up_enqueued_at
+        description: Follow-up enqueued time for content membership.
+      - name: properties_hs_time_to_move_from_subscriber_to_customer
+        description: Time taken to move from subscriber to customer.
+      - name: properties_hs_user_ids_of_all_notification_unfollowers
+        description: User IDs of all notification unfollowers.
+      - name: properties_hs_v2_cumulative_time_in_salesqualifiedlead
+        description: Cumulative time spent in Sales Qualified Lead.
+      - name: properties_hs_v2_latest_time_in_marketingqualifiedlead
+        description: The latest time spent in Marketing Qualified Lead.
+      - name: properties_hs_analytics_first_touch_converting_campaign
+        description: First touch converting campaign from analytics.
+      - name: properties_hs_time_to_move_from_opportunity_to_customer
+        description: Time taken to move from opportunity to customer.
+      - name: properties_hs_lifecyclestage_marketingqualifiedlead_date
+        description: Date when the lifecycle stage was Marketing Qualified Lead.
+      - name: properties_gebruik_je_al_software_hiervoor_zo_ja_dewelke_
+        description: Whether you're already using software for this and if so, which one.
+      - name: properties_hs_membership_last_private_content_access_date
+        description: Last access date of private content for membership.
+      - name: properties_hs_time_between_contact_creation_and_deal_close
+        description: Time between contact creation and deal close.
+      - name: properties_hs_v2_cumulative_time_in_marketingqualifiedlead
+        description: Cumulative time spent in Marketing Qualified Lead.
+      - name: properties_hs_content_membership_registration_email_sent_at
+        description: Timestamp when the content membership registration email was sent.
+      - name: properties_hs_content_membership_registration_domain_sent_to
+        description: Domain to which the content membership registration email was sent.
+      - name: properties_hs_time_between_contact_creation_and_deal_creation
+        description: Time between contact creation and deal creation.
+      - name: properties_hs_searchable_calculated_international_phone_number
+        description: The calculated international phone number that is searchable.
+      - name: properties_hs_time_to_move_from_salesqualifiedlead_to_customer
+        description: Time taken to move from Sales Qualified Lead to customer.
+      - name: properties_hs_searchable_calculated_international_mobile_number
+        description: The calculated international mobile number that is searchable.
+      - name: properties_hs_time_to_move_from_marketingqualifiedlead_to_customer
+        description: Time taken to move from Marketing Qualified Lead to customer.
+      - name: properties_hoeveel_administratief_personeel_is_er_aanwezig_in_jouw_bedrijf
+        description: How much administrative staff is present in your company.
+      - name: properties_wanneer_zou_je_van_start_willen_gaan_als_je_de_perfecte_tool_zou_vinden
+        description: When would you like to start if you found the perfect tool.
+
+
+  - name: stg_deals
+    description: raw data coming from hubspot CRM
+    columns: 
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: properties_hs_v2_latest_time_in_qualifiedtobuy
+        description: The latest time spent in the "Qualified to Buy" stage.
+      - name: properties_hs_analytics_latest_source_timestamp
+        description: The latest source timestamp from analytics.
+      - name: properties_hs_date_entered_appointmentscheduled
+        description: The date when the deal entered the "Appointment Scheduled" stage.
+      - name: properties_hs_date_entered_customclosedwonstage
+        description: The date when the deal entered the "Custom Closed Won" stage.
+      - name: properties_hs_date_exited_decisionmakerboughtin
+        description: The date when the deal exited the "Decision Maker Bought In" stage.
+      - name: properties_hs_date_exited_presentationscheduled
+        description: The date when the deal exited the "Presentation Scheduled" stage.
+      - name: properties_hs_predicted_amount_in_home_currency
+        description: The predicted amount in the home currency.
+      - name: properties_hs_projected_amount_in_home_currency
+        description: The projected amount in the home currency.
+      - name: properties_hs_date_entered_decisionmakerboughtin
+        description: The date when the deal entered the "Decision Maker Bought In" stage.
+      - name: properties_hs_date_entered_presentationscheduled
+        description: The date when the deal entered the "Presentation Scheduled" stage.
+      - name: properties_hs_deal_amount_calculation_preference
+        description: The preference for calculating the deal amount.
+      - name: properties_hs_latest_approval_status_approval_id
+        description: The ID of the latest approval status.
+      - name: properties_welk_onboardingspakket_is_er_gekozen_
+        description: The selected onboarding package.
+      - name: properties_welke_soort_licentie_is_er_afgenomen_
+        description: The type of license acquired.
+      - name: properties_engagements_last_meeting_booked_medium
+        description: The medium of the last booked meeting.
+      - name: properties_engagements_last_meeting_booked_source
+        description: The source of the last booked meeting.
+      - name: properties_hs_v2_date_exited_appointmentscheduled
+        description: The date when the deal exited the "Appointment Scheduled" stage.
+      - name: properties_welke_modules_willen_ze_implementeren_
+        description: The modules they want to implement.
+      - name: properties_hs_v2_cumulative_time_in_qualifiedtobuy
+        description: The cumulative time spent in the "Qualified to Buy" stage.
+      - name: properties_hs_v2_date_entered_appointmentscheduled
+        description: The date when the deal entered the "Appointment Scheduled" stage.
+      - name: properties_reden_voor_keuze_van_onboarding_pakket_
+        description: The reason for choosing the onboarding package.
+      - name: properties_testimonial_details_l_person_to_contact
+        description: Details of the testimonial, including the person to contact.
+      - name: properties_do_no_touch_ll_closed_lost_consolidation
+        description: Do not touch flag for closed/lost consolidation.
+      - name: properties_engagements_last_meeting_booked_campaign
+        description: The campaign of the last booked meeting.
+      - name: properties_hs_analytics_latest_source_data_1_company
+        description: Latest source data field 1 for the company from analytics.
+      - name: properties_hs_analytics_latest_source_data_1_contact
+        description: Latest source data field 1 for the contact from analytics.
+      - name: properties_hs_analytics_latest_source_data_2_company
+        description: Latest source data field 2 for the company from analytics.
+      - name: properties_hs_analytics_latest_source_data_2_contact
+        description: Latest source data field 2 for the contact from analytics.
+      - name: properties_hs_has_empty_conditional_stage_properties
+        description: Flag indicating if there are empty conditional stage properties.
+      - name: properties_hs_user_ids_of_all_notification_followers
+        description: User IDs of all notification followers.
+      - name: properties_hs_v2_latest_time_in_appointmentscheduled
+        description: The latest time spent in the "Appointment Scheduled" stage.
+      - name: properties_contact_via_l_consolidation__do_not_touch_
+        description: Contact via consolidation (do not touch).
+      - name: properties_wat_is_gerichte_go_live_datum_van_de_klant
+        description: The targeted go-live date for the customer.
+      - name: properties_welke_licenties_moeten_worden_geactiveerd_
+        description: Which licenses need to be activated.
+      - name: properties_hs_user_ids_of_all_notification_unfollowers
+        description: User IDs of all notification unfollowers.
+      - name: properties_hs_analytics_latest_source_timestamp_company
+        description: The latest source timestamp for the company from analytics.
+      - name: properties_hs_analytics_latest_source_timestamp_contact
+        description: The latest source timestamp for the contact from analytics.
+      - name: properties_hs_v2_cumulative_time_in_appointmentscheduled
+        description: The cumulative time spent in the "Appointment Scheduled" stage.
+      - name: properties_welke_verwachtingen_heeft_de_klant_mbt_robaws_
+        description: What expectations the customer has regarding ROBAWS.
+      - name: properties_hoeveel_en_welke_licenties_worden_er_afgenomen_
+        description: How many and which licenses are being acquired.
+      - name: properties_hs_line_item_global_term_hs_discount_percentage
+        description: The global term discount percentage for the line item.
+      - name: properties_hs_line_item_global_term_recurringbillingfrequency
+        description: The global term recurring billing frequency for the line item.
+      - name: properties_hs_line_item_global_term_hs_recurring_billing_period
+        description: The global term recurring billing period for the line item.
+      - name: properties_hs_line_item_global_term_hs_discount_percentage_enabled
+        description: Whether the global term discount percentage for the line item is enabled.
+      - name: properties_hs_line_item_global_term_hs_recurring_billing_start_date
+        description: The global term recurring billing start date for the line item.
+      - name: properties_hs_line_item_global_term_recurringbillingfrequency_enabled
+        description: Whether the global term recurring billing frequency for the line item is enabled.
+      - name: properties_hs_line_item_global_term_hs_recurring_billing_period_enabled
+        description: Whether the global term recurring billing period for the line item is enabled.
+      - name: properties_in_welke_sector_is_klant_actief_en_wat_is_hun_specialisatie_
+        description: In which sector the customer is active and their specialization.
+      - name: properties_hs_line_item_global_term_hs_recurring_billing_start_date_enabled
+        description: Whether the global term recurring billing start date for the line item is enabled.
+      - name: properties_zijn_er_eventuele_red_flags_waar_wij_rekening_mee_moeten_houden_
+        description: Whether there are any potential red flags to consider.
+      - name: properties_is_de_klant_snel_vertrokken_met_software__zijn_zij_digitaal_klaar_
+        description: Whether the customer quickly adopted the software and if they are digitally prepared.
+      - name: properties_welk_probleem_willen_zij_oplossen__waarom_heeft_de_klant_specifiek_voor_robaws_gekozen_
+        description: What problem they want to solve and why they specifically chose ROBAWS.
+      - name: properties_wie_zijn_de_stakeholders_tijdens_de_onboarding___decision_maker__key_user__project_sponsor_etc_
+        description: The stakeholders during the onboarding process (decision maker, key user, project sponsor, etc.).
