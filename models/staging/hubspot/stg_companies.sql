@@ -1,3 +1,2 @@
-{{ config(materialized="table") }}
-
-with companies as (select * from `outbound-catalyst.robaws.hubspotcompanies`)
+--{{ config(materialized="table") }}
+select * from {{ source("robaws", "hubspotcompanies") }}
