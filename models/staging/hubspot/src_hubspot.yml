@@ -148,7 +148,6 @@ models:
       - name: properties_hs_analytics_first_touch_converting_campaign_timestamp_earliest_value_4757fe10
         description: Earliest timestamp for first touch converting campaign
 
-
   - name: hubspotcontacts
     description: raw contact data coming from hubspot CRM
     columns:
@@ -262,7 +261,6 @@ models:
         description: How much administrative staff is present in your company.
       - name: properties_wanneer_zou_je_van_start_willen_gaan_als_je_de_perfecte_tool_zou_vinden
         description: When would you like to start if you found the perfect tool.
-
 
   - name: hubspotdeals
     description: raw data coming from hubspot CRM
