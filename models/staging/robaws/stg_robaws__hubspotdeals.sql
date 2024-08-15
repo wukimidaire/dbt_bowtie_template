@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 {{ config(materialized='table') }}
 
+=======
+>>>>>>> ec05a486e5e41fa8885d99294cb9d9152c6b1fdb
 with 
 
 source as (
@@ -11,10 +14,17 @@ source as (
 deal as (
 
     select
+<<<<<<< HEAD
         --_airbyte_raw_id,
         --_airbyte_extracted_at,
         --_airbyte_meta,
         --_airbyte_generation_id,
+=======
+        _airbyte_raw_id,
+        _airbyte_extracted_at,
+        _airbyte_meta,
+        _airbyte_generation_id,
+>>>>>>> ec05a486e5e41fa8885d99294cb9d9152c6b1fdb
         id,
         archived,
         contacts,

@@ -2,7 +2,11 @@ version: 2
 
 sources:
   - name: robaws
+<<<<<<< HEAD
     #description: "{{ doc('hubspot')}}"
+=======
+    #description: "{{ doc('hubspot') }}"
+>>>>>>> ec05a486e5e41fa8885d99294cb9d9152c6b1fdb
     database: outbound-catalyst
     tables:
       - name: hubspotcompanies
@@ -149,7 +153,11 @@ models:
       - name: properties_hs_analytics_first_touch_converting_campaign_timestamp_earliest_value_4757fe10
         description: Earliest timestamp for first touch converting campaign
 
+<<<<<<< HEAD
   - name: stg_contacts
+=======
+  - name: hubspotcontacts
+>>>>>>> ec05a486e5e41fa8885d99294cb9d9152c6b1fdb
     description: raw data coming from hubspot CRM
     columns:
       - name: contact_id
@@ -263,10 +271,17 @@ models:
       - name: properties_wanneer_zou_je_van_start_willen_gaan_als_je_de_perfecte_tool_zou_vinden
         description: When would you like to start if you found the perfect tool.
 
+<<<<<<< HEAD
   - name: stg_deals
     description: raw data coming from hubspot CRM
     columns:
       - name: deal_id
+=======
+  - name: hubspotdeals
+    description: raw data coming from hubspot CRM
+    columns:
+      - name: id
+>>>>>>> ec05a486e5e41fa8885d99294cb9d9152c6b1fdb
         tests:
           - unique
           - not_null
