@@ -2,15 +2,15 @@ version: 2
 
 sources:
   - name: robaws
-    description: "{{ doc('hubspot') }}"
+    #description: "{{ doc('hubspot') }}"
     database: outbound-catalyst
     tables:
-      - name: company
-      - name: contact
-      - name: deal
+      - name: hubspotcompanies
+      - name: hubspotcontacts
+      - name: hubspotdeals
 
 models:
-  - name: stg_companies
+  - name: hubspotcompanies
     description: raw company data coming from hubspot CRM
     columns:
       - name: id
@@ -149,15 +149,14 @@ models:
       - name: properties_hs_analytics_first_touch_converting_campaign_timestamp_earliest_value_4757fe10
         description: Earliest timestamp for first touch converting campaign
 
-        
-  - name: stg_contacts
+  - name: hubspotcontacts
     description: raw data coming from hubspot CRM
-    columns: 
+    columns:
       - name: contact_id
         tests:
           - unique
           - not_null
-           - name: properties_hs_calculated_phone_number_area_code
+      - name: properties_hs_calculated_phone_number_area_code
         description: The calculated area code of the phone number.
       - name: properties_hs_email_customer_quarantined_reason
         description: The reason why the customer's email was quarantined.
@@ -264,10 +263,9 @@ models:
       - name: properties_wanneer_zou_je_van_start_willen_gaan_als_je_de_perfecte_tool_zou_vinden
         description: When would you like to start if you found the perfect tool.
 
-
-  - name: stg_deals
+  - name: hubspotdeals
     description: raw data coming from hubspot CRM
-    columns: 
+    columns:
       - name: id
         tests:
           - unique
