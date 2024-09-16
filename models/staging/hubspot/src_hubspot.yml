@@ -3,6 +3,7 @@ version: 2
 sources:
   - name: robaws
     database: outbound-catalyst
+    schema: robaws
     tables:
       - name: hubspotcompanies
       - name: hubspotcontacts
