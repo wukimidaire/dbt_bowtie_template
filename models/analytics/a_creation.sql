@@ -19,7 +19,7 @@ select
     i.t2,
     ROUND(CASE WHEN e.consideration > 0 THEN (e.consideration  / d.education * 100.0 ) ELSE 0 END, 1) as cr_consideration,
     e.consideration as vm_consideration,
-    --j.t3
+    j.t3,
     ROUND(CASE WHEN e.consideration > 0 THEN (f.onboarding * 100.0 / e.consideration) ELSE 0 END, 1) as cr_close,
     f.onboarding as vm_onboarding,
     g.retained as vm_retained,
@@ -37,7 +37,7 @@ from
     left join {{ ref('int_vm_impact') }} g on CAST(g.month AS DATE) = a.month 
     left join {{ ref('int_t1_awareness') }} h on CAST(h.month AS DATE) = a.month
     left join {{ ref('int_t2_education') }} i on CAST(i.month AS DATE) = a.month
-    --left join {{ ref('int_t3_onboarding') }} j on CAST(j.month AS DATE) = a.month
+    left join {{ ref('int_t3_onboarding') }} j on CAST(j.month AS DATE) = a.month
     --a.contact_create_date
 
 --order by     contact_create_date desc 
