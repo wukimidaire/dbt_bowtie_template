@@ -48,8 +48,9 @@ DATE_TRUNC(CAST(onboarding as date) , MONTH) as month,
 --a.selection, 
 --b.onboarding,
 --b.days_to_close,
-round(date_diff(CAST(onboarding as date),CAST(selection as date) , day),1) as t3
+round(avg(date_diff(CAST(onboarding as date),CAST(selection as date) , day)),1) as t3
+--round(avg(date_diff(cast (selection as date),cast(entered_marketingqualifiedlead as date) , day)),1) as t2
 from selection as a 
 inner join onboarding as b on CAST(b.companyid AS NUMERIC) = CAST(a.companyid AS NUMERIC)
---group by 1 --companyid 
---order by 1 desc 
+group by 1 --companyid 
+order by 1 desc 
