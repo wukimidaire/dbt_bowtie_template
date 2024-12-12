@@ -1,9 +1,9 @@
----                   GNU AFFERO GENERAL PUBLIC LICENSE
----                       Version 3, 19 November 2007
+# GNU AFFERO GENERAL PUBLIC LICENSE
+## Version 3, 19 November 2007
 
 Copyright (C) 2024 Bowtie dbt Template
 
-# Preamble
+## Preamble
 
 This project is committed to open-source principles while protecting
 against commercial exploitation. This license is designed to ensure that:
@@ -15,9 +15,9 @@ against commercial exploitation. This license is designed to ensure that:
    for profit is prohibited without explicit permission from the copyright holder
 5. The copyright holder must be contacted for any commercial licensing inquiries
 
-For commercial licensing inquiries, please contact: [here](https://www.linkedin.com/in/victordecoster/)
+For commercial licensing inquiries, please [contact](https://www.linkedin.com/in/victordecoster/)
 
-# TERMS AND CONDITIONS
+## TERMS AND CONDITIONS
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published by
@@ -50,4 +50,4 @@ GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License
 along with this program. If not, see <https://www.gnu.org/licenses/>.
 
-                     END OF TERMS AND CONDITIONS
+## END OF TERMS AND CONDITIONS
