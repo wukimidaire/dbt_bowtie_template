@@ -10,6 +10,12 @@ A dbt (data build tool) project template for transforming HubSpot CRM data into 
 
 This project provides a structured approach to transform raw HubSpot data into analytics-ready models, enabling a holistic, end-to-end view of your organization's performance. By leveraging the [Winning by Design framework](https://youtu.be/XCRtEVsTXsc?si=7noSFNSuleXw9V1P&t=833), it unifies data across all teams into an actionable operating model.
 
+<p align="center">
+  <a href="https://youtu.be/XCRtEVsTXsc?si=7noSFNSuleXw9V1P&t=833">
+    <img src="media/wbd-thumbnail.jpg" alt="Winning by Design Framework Video" style="max-width:560px;">
+  </a>
+</p>
+
 ### Strategic Impact
 
 - **Cross-functional Alignment**: Bridges data silos between Marketing, Sales, Customer Success, and Product teams
