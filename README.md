@@ -14,18 +14,31 @@ This project provides a structured approach to transform raw HubSpot data into a
 ## Project Structure
 
 models/
+
 ├── analytics/
+
 │ └── a_creation.sql # Final analytics models
+
 ├── intermediate/
+
 │ └── hubspot/ # Intermediate transformations
+
 │ ├── int_t1_awareness.sql
+
 │ ├── int_t2_education.sql
+
 │ ├── int_t3_onboarding.sql
+
 │ └── int_vm_.sql # Various velocity metrics
+
 └── staging/
+
 └── hubspot/ # Initial data staging
+
 ├── stg_companies.sql
+
 ├── stg_contacts.sql
+
 └── stg_deals.sql
 
 
