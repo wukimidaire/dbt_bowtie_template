@@ -8,7 +8,7 @@ A dbt (data build tool) project template for transforming HubSpot CRM data into 
   <img src="media/bowtie.jpeg" alt="Bowtie Analytics Logo" style="max-width:100%; height:auto;">
 </p>
 
-This project provides a structured approach to transform raw HubSpot data into analytics-ready models, enabling a holistic, end-to-end view of your organization's performance. By leveraging the Winning by Design framework, it unifies data across all teams into an actionable operating model.
+This project provides a structured approach to transform raw HubSpot data into analytics-ready models, enabling a holistic, end-to-end view of your organization's performance. By leveraging the [Winning by Design framework](https://youtu.be/XCRtEVsTXsc?si=7noSFNSuleXw9V1P&t=833), it unifies data across all teams into an actionable operating model.
 
 ### Strategic Impact
 
