@@ -163,12 +163,14 @@ models/
 ### Development Workflow
 
 1. Always activate your environment before working:
-   ```bash
+   ```
+   bash
    source activate_env.sh
    ```
 
 2. Run your models:
-   ```bash
+   ```
+   bash
    dbt run
    ```
 
@@ -176,17 +178,20 @@ models/
 
 Run the included tests:
 
+```
 bash
 dbt test
+```
 
 
 ## Documentation
 
 Generate and view documentation:
 
+```
 bash
 dbt docs generate
-dbt docs serve
+dbt docs serve```
 
 ## Contributing
 
