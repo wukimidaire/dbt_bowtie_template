@@ -4,6 +4,10 @@ A dbt (data build tool) project template for transforming HubSpot CRM data into 
 
 ## Overview
 
+<p align="center">
+  <img src="assets/bowtie.jpeg" alt="Bowtie Analytics Logo" width="300"/>
+</p>
+
 This project provides a structured approach to transform raw HubSpot data into analytics-ready models, focusing on:
 
 - Customer journey analytics
