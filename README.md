@@ -203,4 +203,4 @@ dbt docs serve```
 
 ## License
 
-[Here](./LICENSE.md)
+[Here](https://github.com/wukimidaire/dbt_bowtie_template/blob/main/LICENSE.md))
