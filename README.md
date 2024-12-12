@@ -202,5 +202,5 @@ dbt docs serve```
 5. Create a Pull Request
 ```
 
-## License
-[Here](https://github.com/wukimidaire/dbt_bowtie_template/blob/main/LICENSE.md))
+## License (IMPORTANT)
+[Here](https://github.com/wukimidaire/dbt_bowtie_template/blob/main/LICENSE.md)
