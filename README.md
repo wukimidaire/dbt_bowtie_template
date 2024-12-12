@@ -200,7 +200,7 @@ dbt docs serve```
 3. Commit your changes
 4. Push to the branch
 5. Create a Pull Request
+```
 
 ## License
-
 [Here](https://github.com/wukimidaire/dbt_bowtie_template/blob/main/LICENSE.md))
