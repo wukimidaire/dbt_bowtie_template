@@ -8,12 +8,63 @@ A dbt (data build tool) project template for transforming HubSpot CRM data into 
   <img src="media/bowtie.jpeg" alt="Bowtie Analytics Logo" style="max-width:100%; height:auto;">
 </p>
 
-This project provides a structured approach to transform raw HubSpot data into analytics-ready models, focusing on:
+This project provides a structured approach to transform raw HubSpot data into analytics-ready models, enabling a holistic, end-to-end view of your organization's performance. By leveraging the Winning by Design framework, it unifies data across all teams into an actionable operating model.
+
+### Strategic Impact
+
+- **Cross-functional Alignment**: Bridges data silos between Marketing, Sales, Customer Success, and Product teams
+- **Decision Support**: Facilitates data-driven strategic decision-making at all organizational levels
+- **Performance Optimization**: Enables continuous improvement through comprehensive KPI tracking and analysis
+
+### Reverse Engineering Success
+
+This model employs a reverse engineering approach to optimize company performance by:
+- **Starting at Impact**: Understanding what defines successful customers and their long-term value
+- **Working Backwards**: Mapping the critical touchpoints and decisions that lead to customer success
+- **Identifying Patterns**: Recognizing common paths and behaviors of high-value customers
+- **Optimizing Journey**: Refining each stage of the customer journey based on successful outcomes
+- **Scaling Success**: Implementing repeatable processes based on proven customer success patterns
+
+### Key Focus Areas
 
 - Customer journey analytics
 - Velocity metrics tracking
 - Conversion rate analysis
 - Customer retention metrics
+
+### Operational Benefits
+
+- **Strategic Planning**: Identify opportunities and challenges across the entire customer lifecycle
+- **Resource Allocation**: Make informed decisions about team and project prioritization
+- **Performance Tracking**: Monitor and optimize key metrics across all business units
+- **Revenue Intelligence**: Generate actionable insights for revenue growth and customer success
+
+### Roadmap & Future Integrations
+
+#### Marketing Analytics Integration
+- [ ] **Paid Advertising**: LinkedIn, Facebook, Google/GA4 Ads (Basics)
+- [ ] **Web Analytics**
+- [ ] **Attribution Modeling**: Dreamdata integration for out-of-the-box B2B attribution (Advanced)
+
+#### Financial Data Integration
+- [ ] **Revenue Operations**: 
+  - [ ] Chargebee subscription data modeling
+  - [ ] MRR/ARR analytics
+  - [ ] Customer lifetime value calculations
+  - [ ] Churn prediction models
+
+### Activate OKR Reporting
+- [ ] **Streamlit Application**: Apply filters for:
+  - Date range selections: Weekly, monthly, quarterly views
+  - Customer segmentation:
+    - Industry verticals
+    - Company size
+    - Geographic regions
+    - Deal value tiers
+  - Performance metrics: Value, velocity, volume, conversion
+  - Reporting:
+    - Google Sheets OKR Meeting Report
+    - Hubspot Embedded Dashboards
 
 ## Project Structure
 
