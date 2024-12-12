@@ -44,27 +44,20 @@ This model employs a reverse engineering approach to optimize company performanc
 #### Marketing Analytics Integration
 - [ ] **Paid Advertising**: LinkedIn, Facebook, Google/GA4 Ads (Basics)
 - [ ] **Web Analytics**
-- [ ] **Attribution Modeling**: Dreamdata integration for out-of-the-box B2B attribution (Advanced)
+- [ ] **Marketing Campaign Attribution**: Dreamdata for out-of-the-box B2B attribution (Advanced)
 
 #### Financial Data Integration
-- [ ] **Revenue Operations**: 
-  - [ ] Chargebee subscription data modeling
+- [ ] **Chargebee**: 
   - [ ] MRR/ARR analytics
   - [ ] Customer lifetime value calculations
-  - [ ] Churn prediction models
+  - [ ] Cohorts & Churn models
 
-### Activate OKR Reporting
-- [ ] **Streamlit Application**: Apply filters for:
+### OKR Reporting
+- [ ] **Streamlit Application**:
   - Date range selections: Weekly, monthly, quarterly views
-  - Customer segmentation:
-    - Industry verticals
-    - Company size
-    - Geographic regions
-    - Deal value tiers
+  - Dynamic Report: Industry verticals, Company size, Geographic regions, Deal value tiers, ...
   - Performance metrics: Value, velocity, volume, conversion
-  - Reporting:
-    - Google Sheets OKR Meeting Report
-    - Hubspot Embedded Dashboards
+  - Reporting: Google Sheets OKR Meeting Report, Operational Hubspot Embedded Dashboards
 
 ## Project Structure
 
