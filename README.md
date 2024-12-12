@@ -12,7 +12,7 @@ This project provides a structured approach to transform raw HubSpot data into a
 
 <p align="center">
   <a href="https://youtu.be/XCRtEVsTXsc?si=7noSFNSuleXw9V1P&t=833">
-    <img src="media/wbd-thumbnail.jpg" alt="Winning by Design Framework Video" style="max-width:560px;">
+    <img src="media/youtube_thumbnail.png" alt="Winning by Design Framework Video" style="max-width:560px;">
   </a>
 </p>
 
