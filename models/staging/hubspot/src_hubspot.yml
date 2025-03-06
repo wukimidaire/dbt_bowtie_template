@@ -1,9 +1,9 @@
 version: 2
 
 sources:
-  - name: robaws
+  - name: company_name
     database: outbound-catalyst
-    schema: robaws
+    schema: company_name
     tables:
       - name: hubspotcompanies
       - name: hubspotcontacts
