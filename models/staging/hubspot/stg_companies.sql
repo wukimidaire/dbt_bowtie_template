@@ -283,4 +283,4 @@ select
     properties_hs_analytics_last_touch_converting_campaign_timestamp_latest_value_81a64e30,
     properties_hs_analytics_first_touch_converting_campaign_timestamp_earliest_value_4757fe10
 
-from {{ source( 'robaws', 'hubspotcompanies') }}
+from {{ source( 'company_name', 'hubspotcompanies') }}
