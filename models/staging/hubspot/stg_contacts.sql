@@ -37,4 +37,4 @@
         properties_hs_analytics_first_visit_timestamp as properties_hs_analytics_first_visit_timestamp,
         properties_hs_analytics_num_visits as num_visits
     from 
-        {{ source("robaws", "hubspotcontacts") }}
+        {{ source("company_name", "hubspotcontacts") }}
