@@ -37,6 +37,6 @@
             properties_hs_is_closed_won as closedII,
             archived
 
-        from {{ source("robaws", "hubspotdeals") }}
+        from {{ source("company_name", "hubspotdeals") }}
         --where properties_hs_v2_date_exited_closedwon is not null or properties_hs_date_entered_closedlost is not null 
         --properties_dealstage = 'closedwon' --and properties_hs_date_exited_closedwon is not null --properties_hs_is_closed = true --and properties_hs_is_closed_won = true
