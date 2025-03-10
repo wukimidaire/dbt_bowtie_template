@@ -1,6 +1,6 @@
 # Bowtie dbt Template
 
-A comprehensive dbt (data build tool) project template for transforming HubSpot CRM data into actionable analytics models. This template helps organizations build a unified view of their customer journey and business performance metrics across all departments.
+A dbt (data build tool) project template for transforming HubSpot CRM data into actionable analytics models. This template helps organizations build a unified view of their customer journey and business performance metrics across all departments.
 
 This project was created by a data professional with extensive background in revenue operations and as a [Certified Revenue Architect](https://credentials.winningbydesign.com/37564c7b-d069-4cdd-b5de-c0247c284b9d#acc.szFAQmjx) by Winning by Design. The methodology and structure are directly informed by real-world application of these principles across multiple organizations.
 
